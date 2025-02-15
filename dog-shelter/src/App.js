@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import DogCard from "./DogCard";
 
 function App() {
+  // need to fetch the dog information from the API
+  const testJSON = {
+    id: "1",
+    img: "https://via.assets.so/img.jpg?w=400&h=150&tc=blue&bg=#cecece",
+    name: "Buddy",
+    age: 3,
+    zip_code: "12345",
+    breed: "Golden Retriever",
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Testing</h1>
+      <DogCard dog={testJSON} />
     </div>
   );
 }
